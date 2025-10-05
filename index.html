@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced Weather</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="video-bg-container">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="video/bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+  </div>
+
+  <main class="container" role="main" aria-label="Weather Application">
+    <header>
+      <h1>Advanced Weather App</h1>
+      <button id="theme-toggle" aria-label="Toggle light and dark mode">🌤️</button>
+    </header>
+
+    <section class="search-box" aria-label="City search">
+      <input type="search" id="city-input" aria-autocomplete="list" aria-label="Enter city" placeholder="City" />
+      <button id="search-btn" aria-label="Search weather">Search</button>
+      <button id="detect-btn" aria-label="Use current location">📌</button>
+    </section>
+
+    <section id="alerts" role="region" aria-live="polite" aria-atomic="true"></section>
+
+    <section class="weather-info" id="current-weather" aria-label="Current weather" tabindex="0">
+      <!-- Current weather info will load here -->
+    </section>
+
+    <section class="forecast-container" aria-label="Weather forecasts">
+      <div id="daily-forecast" aria-label="Daily forecast"></div>
+      <div id="hourly-forecast" aria-label="Hourly forecast"></div>
+    </section>
+
+    <section class="extra-info" aria-label="Additional weather info">
+      <div id="sun-info" role="region" aria-label="Sunrise and sunset times"></div>
+      <div id="aqi-info" role="region" aria-label="Air quality index"></div>
+      <div id="uv-humidity" role="region" aria-label="UV index and humidity"></div>
+      <div id="wind-info" role="region" aria-label="Wind speed and direction"></div>
+    </section>
+
+    <section class="chart-section" aria-label="Weather trends charts">
+      <canvas id="temperatureChart" aria-label="Temperature trends"></canvas>
+    </section>
+
+    <section class="share-section" aria-label="Share weather">
+      <button id="share-btn" aria-label="Share weather information">Share Weather</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
