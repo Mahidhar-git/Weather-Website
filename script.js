@@ -1,5 +1,5 @@
 const apiKey = "326381ae2ed348df85493938250510"; // Your API key
-const baseUrl = "http://api.weatherapi.com/v1";
+const baseUrl = "https://api.weatherapi.com/v1";
 
 const elements = {
     cityInput: document.getElementById("city-input"),
